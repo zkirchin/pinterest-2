@@ -12,4 +12,43 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+
+.icon-bar {
+	background-color: #C0392B;
+}
+
+.item img {
+	color: white;
+}
+
+#home-bg {
+	background-image: url("train.jpg");
+	height: 100%;
+	width: 100%;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	margin-top: -10px;
+}
+
+.home-banner {
+	position: absolute;
+	margin-top: 25%;
+	height: 25%;
+	width: 100%;
+}
+
+.home-banner h1, .home-banner h3 {
+	font-family: 'Lobster', cursive, sans-serif;
+	color: #008cba;
+	font-size: 2em;
+}
+
+.home-banner h1 {
+	color: #C0392B;
+	font-size: 5em;
+}

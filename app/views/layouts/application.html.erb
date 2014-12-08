@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Pinterest</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title>Pinterest</title>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
 
-</body>
+  <body>
+
+  <div class="icon-bar four-up">
+    <a class="item" href="/">
+      <%= image_tag 'pinterest.svg' %>
+      <label>Pinterest</label>
+    </a>
+    <a class="item" href="/users">
+      <%= image_tag 'users.svg' %>
+      <label>Users</label>
+    </a>
+    <a class="item" href="/boards">
+      <%= image_tag 'file.svg' %>
+      <label>Boards</label>
+    </a>
+    <a class="item" href="/pins">
+      <%= image_tag 'pushpin.svg' %>
+      <label>Pins</label>
+    </a>
+</div>
+
+<%= link_to 'Home', root_path %> | <%= link_to 'Users', users_path %> | <%= link_to 'Boards', boards_path %> | <%= link_to 'Pins', pins_path %>
+
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
