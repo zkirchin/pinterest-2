@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @users = User.all
 
     if @users.count > 5
-      @some_text = "Great! we have #{@users.count} users!"
+      @some_text = "There are #{@users.count} users."
     else
       @some_text = "We need more users."
     end
